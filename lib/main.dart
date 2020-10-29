@@ -7,6 +7,7 @@ import 'package:explore/screens/questionsInfo.dart';
 import 'package:explore/screens/refer_earn.dart';
 import 'package:explore/screens/signUp.dart';
 import 'package:explore/screens/signupAndDownload.dart';
+import 'package:explore/screens/writeTous.dart';
 import 'package:explore/utils/authentication.dart';
 import 'package:flutter/material.dart';
 
@@ -111,6 +112,7 @@ class _MyAppState extends State<MyApp> {
             '/about-us': (context) => AboutUs(),
             '/points-tabel': (context) => PointsTabel(),
             '/sigunup-download': (context) => SignupAndDownload(),
+            '/write-to-us': (context) => WriteToUs(),
           }),
     );
   }

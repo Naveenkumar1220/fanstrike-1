@@ -155,6 +155,50 @@ class _AboutUsPage extends State<AboutUs> {
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
+                        Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 5,
+                                child: leftContent(),
+                              ),
+                              Expanded(
+                                flex: 5,
+                                child:
+                                    Image.asset('assets/images/About us 1.png'),
+                              )
+                            ]),
+                        Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Your Striking 11 and the Surprises You Crave For',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    color: Color.fromRGBO(86, 69, 69, 1),
+                                    fontFamily: 'Poppins',
+                                    fontSize: 20,
+                                    letterSpacing:
+                                        0 /*percentages not used in flutter. defaulting to zero*/,
+                                    fontWeight: FontWeight.bold,
+                                    height: 1.5),
+                              ),
+                              SizedBox(height: screenSize.height / 10),
+                              Text(
+                                'Your Striking 11 and the Surprises You Crave For',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    color: Color.fromRGBO(86, 69, 69, 1),
+                                    fontFamily: 'Poppins',
+                                    fontSize: 20,
+                                    letterSpacing:
+                                        0 /*percentages not used in flutter. defaulting to zero*/,
+                                    fontWeight: FontWeight.normal,
+                                    height: 1.5),
+                              ),
+                            ]),
                         SizedBox(height: screenSize.height / 10),
                         BottomBar(),
                         Footer(screenSize: screenSize),
@@ -165,6 +209,25 @@ class _AboutUsPage extends State<AboutUs> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget leftContent() {
+    return Container(
+      child: Column(children: [
+        Text(
+          'left tExt',
+          textAlign: TextAlign.left,
+          style: TextStyle(
+              color: Color.fromRGBO(86, 69, 69, 1),
+              fontFamily: 'Poppins',
+              fontSize: 20,
+              letterSpacing:
+                  0 /*percentages not used in flutter. defaulting to zero*/,
+              fontWeight: FontWeight.normal,
+              height: 1.5),
+        ),
+      ]),
     );
   }
 }

@@ -139,7 +139,7 @@ class _SignupAndDownloadPage extends State<SignupAndDownload> {
                       padding: EdgeInsets.only(
                           top: screenSize.width > 800 ? 240 : 100, left: 75),
                       child: Text(
-                        'About us',
+                        'Sign up',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 1),
@@ -155,6 +155,106 @@ class _SignupAndDownloadPage extends State<SignupAndDownload> {
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
+                        Text(
+                          'Registration & Login ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2.3333333333333335),
+                        ),
+                        Text(
+                          'FanStrike provides a hassle-free registration where you need a valid mobile number and e-mail account. A verification code will be sent to your mobile number and e-mail ID and once you type that in the required filed, Bingo! You’re a verified user of FanStrike. We welcome you with a cash bonus of ___ so that you can start fantasy gaming right on the go! ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(86, 69, 69, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2),
+                        ),
+                        SizedBox(height: screenSize.height / 10),
+                        Text(
+                          'Download app ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2.3333333333333335),
+                        ),
+                        Text(
+                          'The Android app for FanStrike can be found at <insert play store link/apk link> and iOS app is available at <insert app store link>. Alternatively, you can download the app by going to our homepage, https://fanstrike.com and clicking on the "Download app" tab in the menu. ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(86, 69, 69, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2),
+                        ),
+                        SizedBox(height: screenSize.height / 10),
+                        Text(
+                          'Screenshots',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 40,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.75),
+                        ),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                child: emptyContainer(),
+                              ),
+                              Expanded(
+                                child: emptyContainer(),
+                              ),
+                              Expanded(
+                                child: emptyContainer(),
+                              )
+                            ]),
+                        SizedBox(height: screenSize.height / 10),
+                        Text(
+                          'Not able to login? ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2.3333333333333335),
+                        ),
+                        Text(
+                          'Check whether your inserted registered mobile number and password are right! You can also login with the OTP option by entering your mobile number. Click on “Forgot Password” if you don’t remember your password, enter your mobile number and you will be receiving an OTP so you can create a new password. If you still can’t get through, reach out to us by clicking on ‘Contact Us’ tab. ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(86, 69, 69, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2),
+                        ),
                         SizedBox(height: screenSize.height / 10),
                         BottomBar(),
                         Footer(screenSize: screenSize),
@@ -166,5 +266,21 @@ class _SignupAndDownloadPage extends State<SignupAndDownload> {
         ),
       ),
     );
+  }
+
+  Widget emptyContainer() {
+    return Container(
+        width: 348,
+        height: 507,
+        margin: const EdgeInsets.all(40),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+          color: Color.fromRGBO(184, 184, 184, 1),
+        ));
   }
 }

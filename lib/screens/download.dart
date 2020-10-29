@@ -1,5 +1,4 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
-import 'package:explore/widgets/expansiontail.dart';
 import 'package:explore/widgets/newFiles/footer/footer.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
@@ -156,6 +155,46 @@ class _DownloadPage extends State<Download> {
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
+                        Image.asset('assets/images/qrScanner.png'),
+                        Text(
+                          'Follow these steps to install the Fanstrike Android App',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.5),
+                        ),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                child: emptyContainer(),
+                              ),
+                              Expanded(
+                                child: emptyContainer(),
+                              ),
+                              Expanded(
+                                child: emptyContainer(),
+                              )
+                            ]),
+                        Text(
+                          'App Store Rating',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.5),
+                        ),
+                        SizedBox(height: screenSize.height / 10),
+                        Image.asset('assets/images/rating.png'),
                         SizedBox(height: screenSize.height / 10),
                         BottomBar(),
                         Footer(screenSize: screenSize),
@@ -167,5 +206,21 @@ class _DownloadPage extends State<Download> {
         ),
       ),
     );
+  }
+
+  Widget emptyContainer() {
+    return Container(
+        width: 348,
+        height: 507,
+        margin: const EdgeInsets.all(40),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15),
+          ),
+          color: Color.fromRGBO(184, 184, 184, 1),
+        ));
   }
 }

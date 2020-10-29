@@ -87,23 +87,26 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    decoration:BoxDecoration(color:Color.fromRGBO(25, 42, 86, 1)),
-                    padding: EdgeInsets.only(right:25),
-                    alignment: Alignment.centerRight,
-                  child:DropdownButton<String>(
-                    underline: SizedBox(),
-                    hint: Text('Language',style: TextStyle(
-                  color: Colors.white,
-                )),
-                    // dropdownColor: Colors.grey,
-                    items: <String>['English', 'Hindi', 'Telugu'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                  )),
+                      decoration:
+                          BoxDecoration(color: Color.fromRGBO(25, 42, 86, 1)),
+                      padding: EdgeInsets.only(right: 25),
+                      alignment: Alignment.centerRight,
+                      child: DropdownButton<String>(
+                        underline: SizedBox(),
+                        hint: Text('Language',
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                        // dropdownColor: Colors.grey,
+                        items: <String>['English', 'Hindi', 'Telugu']
+                            .map((String value) {
+                          return new DropdownMenuItem<String>(
+                            value: value,
+                            child: new Text(value),
+                          );
+                        }).toList(),
+                        onChanged: (_) {},
+                      )),
                   TopBarContents(_opacity),
                 ],
               )),

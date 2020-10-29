@@ -1,5 +1,4 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
-import 'package:explore/widgets/expansiontail.dart';
 import 'package:explore/widgets/newFiles/footer/footer.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
@@ -156,6 +155,48 @@ class _HowToPlayPage extends State<HowToPlay> {
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 5,
+                                child: cards(
+                                    title: "Step 1",
+                                    autoScreenSize: screenSize,
+                                    text:
+                                        "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                              ),
+                              Expanded(
+                                flex: 5,
+                                child: cards(
+                                    title: "Step 2",
+                                    autoScreenSize: screenSize,
+                                    text:
+                                        "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                              )
+                            ]),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 5,
+                                child: cards(
+                                    title: "Step 3",
+                                    autoScreenSize: screenSize,
+                                    text:
+                                        "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                              ),
+                              Expanded(
+                                flex: 5,
+                                child: cards(
+                                    title: "Step 4",
+                                    autoScreenSize: screenSize,
+                                    text:
+                                        "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                              )
+                            ]),
                         SizedBox(height: screenSize.height / 10),
                         BottomBar(),
                         Footer(screenSize: screenSize),
@@ -167,5 +208,48 @@ class _HowToPlayPage extends State<HowToPlay> {
         ),
       ),
     );
+  }
+
+  Widget cards({String title, autoScreenSize, String text}) {
+    return Container(
+        width: 800,
+        // height: 482,
+        color: Color.fromRGBO(196, 196, 196, 0.1),
+        margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                  padding: EdgeInsets.only(left: 13),
+                  child: Column(children: [
+                    Image.asset('assets/images/imagePH.png',
+                        width: 308, height: 290),
+                    Text(
+                      title,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          color: Colors.blueGrey,
+                          fontFamily: 'Poppins',
+                          fontSize: 28,
+                          letterSpacing:
+                              0 /*percentages not used in flutter. defaulting to zero*/,
+                          fontWeight: FontWeight.normal,
+                          height: 1.3),
+                    ),
+                    Text(
+                      text,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color.fromRGBO(86, 69, 69, 1),
+                          fontFamily: 'Poppins',
+                          fontSize: 20,
+                          letterSpacing:
+                              0 /*percentages not used in flutter. defaulting to zero*/,
+                          fontWeight: FontWeight.normal,
+                          height: 1.5),
+                    )
+                  ])),
+            ]));
   }
 }

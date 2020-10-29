@@ -1,7 +1,6 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:explore/widgets/expansiontail.dart';
 import 'package:explore/widgets/newFiles/footer/footer.dart';
-import 'package:explore/widgets/newFiles/referAndEarn/refSectionTwo.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
 import 'package:explore/widgets/explore_drawer.dart';

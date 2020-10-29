@@ -139,7 +139,7 @@ class _PointsTabelPage extends State<PointsTabel> {
                       padding: EdgeInsets.only(
                           top: screenSize.width > 800 ? 240 : 100, left: 75),
                       child: Text(
-                        'About us',
+                        'Points tabel',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 1),
@@ -155,6 +155,30 @@ class _PointsTabelPage extends State<PointsTabel> {
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
+                        Text(
+                          'Registration & Login ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2.3333333333333335),
+                        ),
+                        Text(
+                          'FanStrike provides a hassle-free registration where you need a valid mobile number and e-mail account. A verification code will be sent to your mobile number and e-mail ID and once you type that in the required filed, Bingo! You’re a verified user of FanStrike. We welcome you with a cash bonus of ___ so that you can start fantasy gaming right on the go! ',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(86, 69, 69, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 2),
+                        ),
                         SizedBox(height: screenSize.height / 10),
                         BottomBar(),
                         Footer(screenSize: screenSize),

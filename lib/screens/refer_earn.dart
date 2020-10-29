@@ -5,10 +5,8 @@ import 'package:explore/widgets/newFiles/referAndEarn/refSectionTwo.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
 import 'package:explore/widgets/explore_drawer.dart';
-import 'package:explore/widgets/floating_quick_access_bar.dart';
 import 'package:explore/widgets/responsive.dart';
 import 'package:explore/widgets/top_bar_contents.dart';
-import 'package:explore/widgets/newFiles/sectionOne.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -126,27 +124,27 @@ class _ReferAndEarn extends State<ReferAndEarn> {
                   ConstrainedBox(
                     constraints: BoxConstraints(
                       minWidth: screenSize.width,
-                      minHeight: screenSize.width>800? 700:250,
+                      minHeight: screenSize.width > 800 ? 700 : 250,
                       maxWidth: screenSize.width,
-                      maxHeight: screenSize.width>800? 700:250,
+                      maxHeight: screenSize.width > 800 ? 700 : 250,
                     ),
                   ),
                   AspectRatio(
                     aspectRatio: screenSize.width > 800 ? 4 / 1 : 4 / 1,
-                  // Positioned(
-                      // left: 10,
-                      // bottom: 0,
-                      // right: 10,
-                      child:Image.asset(
-                        'assets/images/Stadium1.png',
-                        fit: BoxFit.fitWidth,
-                        width: 1300,
-                        height: 400,
-                        ),
-                      ),
+                    // Positioned(
+                    // left: 10,
+                    // bottom: 0,
+                    // right: 10,
+                    child: Image.asset(
+                      'assets/images/Stadium1.png',
+                      fit: BoxFit.fitWidth,
+                      width: 1300,
+                      height: 400,
+                    ),
+                  ),
                   Positioned(
                     left: 10,
-                    top: screenSize.width>800? 50:0,
+                    top: screenSize.width > 800 ? 50 : 0,
                     right: 10,
                     // bottom: 70,
                     child: RefAndEarnSectionOne(screenSize: screenSize),
