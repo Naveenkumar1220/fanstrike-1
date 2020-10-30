@@ -4,12 +4,12 @@ import 'package:explore/widgets/newFiles/referAndEarn/referandEarn/refleft.dart'
 import 'package:flutter/material.dart';
 
 class RefAndEarnSectionOne extends StatelessWidget {
-  RefAndEarnSectionOne({
-    Key key,
-    @required this.screenSize,
-  }) : super(key: key);
-
+  // RefAndEarnSectionOne({Key key, @required this.screenSize, screenFor})
+  //     : super(key: key);
   final Size screenSize;
+  final String screenFor;
+
+  RefAndEarnSectionOne(this.screenSize, this.screenFor);
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +28,9 @@ class RefAndEarnSectionOne extends StatelessWidget {
           children: <Widget>[
             Expanded(
               flex: 5,
-              child: RefLeft(screenSize: screenSize),
+              child: RefLeft(screenSize, screenFor),
             ),
-            Expanded(flex: 5, child: RefRight(screenSize: screenSize)),
+            Expanded(flex: 5, child: RefRight(screenSize, screenFor)),
             // Carouselmain(screenSize: screenSize)
           ]),
     );

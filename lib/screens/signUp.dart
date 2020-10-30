@@ -1,6 +1,6 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
-import 'package:explore/widgets/expansiontail.dart';
 import 'package:explore/widgets/newFiles/footer/footer.dart';
+import 'package:explore/widgets/newFiles/registratrion.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
 import 'package:explore/widgets/explore_drawer.dart';
@@ -140,7 +140,7 @@ class _SignUpPage extends State<SignUp> {
                       padding: EdgeInsets.only(
                           top: screenSize.width > 800 ? 240 : 100, left: 75),
                       child: Text(
-                        'Sign Up',
+                        'Sign up',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 1),
@@ -149,13 +149,55 @@ class _SignUpPage extends State<SignUp> {
                             letterSpacing:
                                 0 /*percentages not used in flutter. defaulting to zero*/,
                             fontWeight: FontWeight.normal,
-                            height: 1),
+                            height: 1.5),
                       )),
                 ],
               ),
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 5,
+                                child: RegistrationForm(),
+                              ),
+                              Expanded(
+                                flex: 5,
+                                child: Text("gygy"),
+                              ),
+                            ]),
+                        Text(
+                          'Screenshots',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 40,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.75),
+                        ),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset('assets/images/login 1.png'),
+                              ),
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset('assets/images/login 2.png'),
+                              ),
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset('assets/images/login 3.png'),
+                              ),
+                            ]),
                         SizedBox(height: screenSize.height / 10),
                         BottomBar(),
                         Footer(screenSize: screenSize),

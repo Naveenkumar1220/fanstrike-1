@@ -147,7 +147,7 @@ class _ReferAndEarn extends State<ReferAndEarn> {
                     top: screenSize.width > 800 ? 50 : 0,
                     right: 10,
                     // bottom: 70,
-                    child: RefAndEarnSectionOne(screenSize: screenSize),
+                    child: RefAndEarnSectionOne(screenSize, "ReferAndEarn"),
                   ),
                   // child:RefAndEarnSectionOne(screenSize: screenSize),
                 ],

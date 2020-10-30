@@ -178,6 +178,7 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
                                           autoscreensize: screenSize),
                                     ),
                                   ]),
+                              SizedBox(height: screenSize.height / 10),
                               Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,

@@ -147,7 +147,7 @@ class _WritetoUsPage extends State<WriteToUs> {
                     top: screenSize.width > 800 ? 50 : 0,
                     right: 10,
                     // bottom: 70,
-                    child: RefAndEarnSectionOne(screenSize: screenSize),
+                    child: RefAndEarnSectionOne(screenSize, "write to us"),
                   ),
                   // child:RefAndEarnSectionOne(screenSize: screenSize),
                 ],

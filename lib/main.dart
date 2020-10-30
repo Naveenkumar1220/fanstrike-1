@@ -1,5 +1,6 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:explore/screens/about_us.dart';
+import 'package:explore/screens/becomeInfluencer.dart';
 import 'package:explore/screens/download.dart';
 import 'package:explore/screens/howToplay.dart';
 import 'package:explore/screens/pointsTabel.dart';
@@ -113,6 +114,7 @@ class _MyAppState extends State<MyApp> {
             '/points-tabel': (context) => PointsTabel(),
             '/sigunup-download': (context) => SignupAndDownload(),
             '/write-to-us': (context) => WriteToUs(),
+            '/become-influencer': (context) => BecomeInfluencer(),
           }),
     );
   }
