@@ -212,29 +212,32 @@ class _HowToPlayPage extends State<HowToPlay> {
 
   Widget cards({String title, autoScreenSize, String text}) {
     return Container(
-        width: 800,
+        width: 450,
         // height: 482,
-        color: Color.fromRGBO(196, 196, 196, 0.1),
-        margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+        
+        margin: const EdgeInsets.only(bottom: 143),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                  padding: EdgeInsets.only(left: 13),
+              Container(
+                width: 450,
+                color: Color.fromRGBO(196, 196, 196, 0.1),
+              child:Padding(
+                  padding: EdgeInsets.all(64.0),
                   child: Column(children: [
                     Image.asset('assets/images/imagePH.png',
-                        width: 308, height: 290),
+                        width: 188, height: 188),
                     Text(
                       title,
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           color: Colors.blueGrey,
-                          fontFamily: 'Poppins',
-                          fontSize: 28,
+                          fontFamily: 'PoppinsBold',
+                          fontSize: 34,
                           letterSpacing:
                               0 /*percentages not used in flutter. defaulting to zero*/,
-                          fontWeight: FontWeight.normal,
+                          // fontWeight: FontWeight.normal,
                           height: 1.3),
                     ),
                     Text(
@@ -242,14 +245,14 @@ class _HowToPlayPage extends State<HowToPlay> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Color.fromRGBO(86, 69, 69, 1),
-                          fontFamily: 'Poppins',
+                          fontFamily: 'PoppinsLight',
                           fontSize: 20,
                           letterSpacing:
                               0 /*percentages not used in flutter. defaulting to zero*/,
-                          fontWeight: FontWeight.normal,
+                          // fontWeight: FontWeight.normal,
                           height: 1.5),
                     )
-                  ])),
+                  ]))),
             ]));
   }
 }

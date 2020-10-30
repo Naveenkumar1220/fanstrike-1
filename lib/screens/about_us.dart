@@ -154,55 +154,145 @@ class _AboutUsPage extends State<AboutUs> {
               ),
               screenSize.width > 800
                   ? Container(
-                      child: Column(children: [
-                        Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Expanded(
-                                flex: 5,
-                                child: leftContent(),
-                              ),
-                              Expanded(
-                                flex: 5,
-                                child:
-                                    Image.asset('assets/images/About us 1.png'),
-                              )
-                            ]),
-                        Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                'Your Striking 11 and the Surprises You Crave For',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    color: Color.fromRGBO(86, 69, 69, 1),
-                                    fontFamily: 'Poppins',
-                                    fontSize: 20,
-                                    letterSpacing:
-                                        0 /*percentages not used in flutter. defaulting to zero*/,
-                                    fontWeight: FontWeight.bold,
-                                    height: 1.5),
-                              ),
-                              SizedBox(height: screenSize.height / 10),
-                              Text(
-                                'Your Striking 11 and the Surprises You Crave For',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    color: Color.fromRGBO(86, 69, 69, 1),
-                                    fontFamily: 'Poppins',
-                                    fontSize: 20,
-                                    letterSpacing:
-                                        0 /*percentages not used in flutter. defaulting to zero*/,
-                                    fontWeight: FontWeight.normal,
-                                    height: 1.5),
-                              ),
-                            ]),
-                        SizedBox(height: screenSize.height / 10),
-                        BottomBar(),
-                        Footer(screenSize: screenSize),
-                      ]),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            ConstrainedBox(
+                                constraints: BoxConstraints(maxWidth: 1300),
+                                child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 5,
+                                        child: leftContent(),
+                                      ),
+                                      Expanded(
+                                          flex: 5,
+                                          child: Container(
+                                              child: AspectRatio(
+                                            aspectRatio: 6 / 3,
+                                            child: Image.asset(
+                                                'assets/images/About us 1.png'),
+                                          )))
+                                    ])),
+                            ConstrainedBox(
+                                constraints: BoxConstraints(maxWidth: 1300),
+                                child: Padding(
+                                    padding: EdgeInsets.only(top: 50),
+                                    child: Column(
+                                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            'Your Striking 11 and the Surprises You Crave For',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(
+                                                    86, 69, 69, 1),
+                                                fontFamily: 'PoppinsBold',
+                                                fontSize: 20,
+                                                letterSpacing:
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
+                                                // fontWeight: FontWeight.bold,
+                                                height: 1.5),
+                                          ),
+                                          // SizedBox(height: screenSize.height / 10),
+                                          Text(
+                                            'Create your dream combination, book your spot in the best of pools, sit back and relax. Let the folks do the rest, your strikers will never let you down!',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(
+                                                    86, 69, 69, 1),
+                                                fontFamily: 'Poppins',
+                                                fontSize: 18,
+                                                letterSpacing:
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
+                                                fontWeight: FontWeight.normal,
+                                                height: 1.5),
+                                          ),
+                                        ]))),
+                            ConstrainedBox(
+                                constraints: BoxConstraints(maxWidth: 1300),
+                                child: Padding(
+                                    padding: EdgeInsets.only(top: 50),
+                                    child: Column(
+                                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            'Kids! There Ain’t Any Monopoly, You’re Not the Only One Here',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(
+                                                    86, 69, 69, 1),
+                                                fontFamily: 'PoppinsBold',
+                                                fontSize: 20,
+                                                letterSpacing:
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
+                                                // fontWeight: FontWeight.bold,
+                                                height: 1.5),
+                                          ),
+                                          // SizedBox(height: screenSize.height / 10),
+                                          Text(
+                                            'What’s the fun in competing when there is no real competitor? Introduce your expertise to the world, locking horns with the strikers across the world. We’re damn excited to see you in the leaderboard!',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(
+                                                    86, 69, 69, 1),
+                                                fontFamily: 'Poppins',
+                                                fontSize: 18,
+                                                letterSpacing:
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
+                                                fontWeight: FontWeight.normal,
+                                                height: 1.5),
+                                          ),
+                                        ]))),
+                            ConstrainedBox(
+                                constraints: BoxConstraints(maxWidth: 1300),
+                                child: Padding(
+                                    padding: EdgeInsets.only(top: 50),
+                                    child: Column(
+                                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            'Hustle Free Smooth Interface',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(
+                                                    86, 69, 69, 1),
+                                                fontFamily: 'PoppinsBold',
+                                                fontSize: 20,
+                                                letterSpacing:
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
+                                                // fontWeight: FontWeight.bold,
+                                                height: 1.5),
+                                          ),
+                                          // SizedBox(height: screenSize.height / 10),
+                                          Text(
+                                            'Your title cards, interval and the climax are as simple as you watch a one-minute video clip. We recommend you to sign-up straightaway and explore what’s there in FanStrike instead of reading all this boring stuff. Wish you good luck brus and gals!!',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                color: Color.fromRGBO(
+                                                    86, 69, 69, 1),
+                                                fontFamily: 'Poppins',
+                                                fontSize: 18,
+                                                letterSpacing:
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
+                                                fontWeight: FontWeight.normal,
+                                                height: 1.5),
+                                          ),
+                                        ]))),
+                            SizedBox(height: screenSize.height / 10),
+                            BottomBar(),
+                            Footer(screenSize: screenSize),
+                          ]),
                     )
                   : SizedBox(height: screenSize.height / 10),
             ],
@@ -214,20 +304,36 @@ class _AboutUsPage extends State<AboutUs> {
 
   Widget leftContent() {
     return Container(
-      child: Column(children: [
-        Text(
-          'left tExt',
-          textAlign: TextAlign.left,
-          style: TextStyle(
-              color: Color.fromRGBO(86, 69, 69, 1),
-              fontFamily: 'Poppins',
-              fontSize: 20,
-              letterSpacing:
-                  0 /*percentages not used in flutter. defaulting to zero*/,
-              fontWeight: FontWeight.normal,
-              height: 1.5),
-        ),
-      ]),
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              'Thrill. Guts. Sports. Fantasy',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  color: Color.fromRGBO(86, 69, 69, 1),
+                  fontFamily: 'PoppinsBold',
+                  fontSize: 20,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1.5),
+            ),
+            Text(
+              'Hey you...dear freaks and folks... let us revolutionalize the era of digital sports.Install Fanstrike to strike up your chances of leading the dream combinations. COmpete with strikers across the world and get rewarded for your expertise in sports,predictions and have fun while experimenting with unlimited combinations.\n\n'
+              'Time to fire up your spirits and experience the world beyond fantasy. FanStrike doesn’t want to limit itself to the basic concept of fantasy. Skip few months and you’ll find hell lot of games and exciting contests in FanStrike luring your fingertips.\n\n'
+              'But we are in hurry, just as you. We couldn’t wait so long to meet the folks outside. We are here in the play store with what exactly you need -',
+              style: TextStyle(
+                  color: Color.fromRGBO(86, 69, 69, 1),
+                  fontFamily: 'Poppins',
+                  fontSize: 18,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1.5),
+            ),
+          ]),
     );
   }
 }
