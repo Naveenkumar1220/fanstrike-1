@@ -200,7 +200,56 @@ class _DownloadPage extends State<Download> {
                         Footer(screenSize: screenSize),
                       ]),
                     )
-                  : SizedBox(height: screenSize.height / 10),
+                  : Column(children: [
+                    Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                    child:Image.asset('assets/images/qrScanner.png')),
+                        Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                        child:Text(
+                          'Follow these steps to install the Fanstrike Android App',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.5),
+                        )),
+                        Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                     child: emptyContainer()),
+                      Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                      child:emptyContainer()),
+                      Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                      child:emptyContainer()),
+                      Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                      child:Text(
+                          'App Store Rating',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 30,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.5),
+                        )),
+                        SizedBox(height: screenSize.height / 10),
+                        Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                        child:Image.asset('assets/images/rating.png'),
+                    ),
+                        SizedBox(height: screenSize.height / 10),
+                        BottomBar(),
+                        Footer(screenSize: screenSize),
+                  ],)
             ],
           ),
         ),

@@ -162,9 +162,9 @@ class _BinfluencerPage extends State<BecomeInfluencer> {
                     letterSpacing:
                         0 /*percentages not used in flutter. defaulting to zero*/,
                     fontWeight: FontWeight.normal,
-                    height: 1.75),
+                    height: screenSize.width>800? 1.75:1.2),
               ),
-              Row(
+              screenSize.width>800 ? Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -180,9 +180,26 @@ class _BinfluencerPage extends State<BecomeInfluencer> {
                       flex: 5,
                       child: cards(autoScreenSize: screenSize),
                     ),
-                  ]),
+                  ]):
+                  // SizedBox(height: screenSize.height / 10),
+                  Column(children: [
+                      Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: cards(autoScreenSize: screenSize)
+                      ),
+                      SizedBox(height: screenSize.height / 10),
+                      Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: cards(autoScreenSize: screenSize)
+                      ),
+                      SizedBox(height: screenSize.height / 10),
+                      Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: cards(autoScreenSize: screenSize)
+                      )
+                  ],),
               SizedBox(height: screenSize.height / 10),
-              Row(
+              screenSize.width>800 ? Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -198,7 +215,25 @@ class _BinfluencerPage extends State<BecomeInfluencer> {
                       flex: 5,
                       child: cards(autoScreenSize: screenSize),
                     ),
-                  ]),
+                  ]):
+                  // SizedBox(height: screenSize.height / 10),
+                  Column(children: [
+                    
+                      Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: cards(autoScreenSize: screenSize)
+                      ),
+                      SizedBox(height: screenSize.height / 10),
+                      Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: cards(autoScreenSize: screenSize)
+                      ),
+                      SizedBox(height: screenSize.height / 10),
+                      Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: cards(autoScreenSize: screenSize)
+                      )
+                  ],),
               SizedBox(height: screenSize.height / 10),
               BottomBar(),
               Footer(screenSize: screenSize)

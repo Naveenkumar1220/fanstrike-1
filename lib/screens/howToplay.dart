@@ -202,7 +202,45 @@ class _HowToPlayPage extends State<HowToPlay> {
                         Footer(screenSize: screenSize),
                       ]),
                     )
-                  : SizedBox(height: screenSize.height / 10),
+                  : Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 20, right: 20),
+                          child: cards(
+                              title: "Step 1",
+                              autoScreenSize: screenSize,
+                              text:
+                                  "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20, right: 20),
+                          child: cards(
+                              title: "Step 2",
+                              autoScreenSize: screenSize,
+                              text:
+                                  "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20, right: 20),
+                          child: cards(
+                              title: "Step 3",
+                              autoScreenSize: screenSize,
+                              text:
+                                  "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 20, right: 20),
+                          child: cards(
+                              title: "Step 4",
+                              autoScreenSize: screenSize,
+                              text:
+                                  "Become a Striker (Present) What happens You’re a superhero now (Future)"),
+                        ),
+                        SizedBox(height: screenSize.height / 10),
+                        BottomBar(),
+                        Footer(screenSize: screenSize),
+                      ],
+                    )
             ],
           ),
         ),
@@ -214,45 +252,45 @@ class _HowToPlayPage extends State<HowToPlay> {
     return Container(
         width: 450,
         // height: 482,
-        
+
         margin: const EdgeInsets.only(bottom: 143),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: 450,
-                color: Color.fromRGBO(196, 196, 196, 0.1),
-              child:Padding(
-                  padding: EdgeInsets.all(64.0),
-                  child: Column(children: [
-                    Image.asset('assets/images/imagePH.png',
-                        width: 188, height: 188),
-                    Text(
-                      title,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                          color: Colors.blueGrey,
-                          fontFamily: 'PoppinsBold',
-                          fontSize: 34,
-                          letterSpacing:
-                              0 /*percentages not used in flutter. defaulting to zero*/,
-                          // fontWeight: FontWeight.normal,
-                          height: 1.3),
-                    ),
-                    Text(
-                      text,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Color.fromRGBO(86, 69, 69, 1),
-                          fontFamily: 'PoppinsLight',
-                          fontSize: 20,
-                          letterSpacing:
-                              0 /*percentages not used in flutter. defaulting to zero*/,
-                          // fontWeight: FontWeight.normal,
-                          height: 1.5),
-                    )
-                  ]))),
+                  width: 450,
+                  color: Color.fromRGBO(196, 196, 196, 0.1),
+                  child: Padding(
+                      padding: EdgeInsets.all(64.0),
+                      child: Column(children: [
+                        Image.asset('assets/images/imagePH.png',
+                            width: 188, height: 188),
+                        Text(
+                          title,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontFamily: 'PoppinsBold',
+                              fontSize: 34,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              // fontWeight: FontWeight.normal,
+                              height: 1.3),
+                        ),
+                        Text(
+                          text,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromRGBO(86, 69, 69, 1),
+                              fontFamily: 'PoppinsLight',
+                              fontSize: 20,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              // fontWeight: FontWeight.normal,
+                              height: 1.5),
+                        )
+                      ]))),
             ]));
   }
 }

@@ -32,7 +32,7 @@ class BottomBar extends StatelessWidget {
                     BottomBarColumn(
                       heading: '',
                       s1: 'How To Play',
-                      s2: 'Points Tabel',
+                      s2: 'Points Table',
                       s3: 'Refer and Earn',
                     ),
                   // ],
@@ -77,7 +77,7 @@ class BottomBar extends StatelessWidget {
                     BottomBarColumn(
                       heading: '',
                       s1: 'How To Play',
-                      s2: 'Points Tabel',
+                      s2: 'Points Table',
                       s3: 'Refer and Earn',
                     ),
                     BottomBarColumn(
