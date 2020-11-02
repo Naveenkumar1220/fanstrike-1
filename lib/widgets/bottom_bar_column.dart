@@ -46,17 +46,41 @@ class BottomBarColumn extends StatelessWidget {
                           : Brightness.dark);
                 },
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, '/frequent-questions');
-                },
-              child:Text(
-                s1,
-                style: TextStyle(
-                  color: Colors.blueGrey[100],
-                  fontSize: 14,
-                ),
-              ))
+              this.s1 == 'Faq'
+                  ? InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/frequent-questions');
+                      },
+                      child: Text(
+                        s1,
+                        style: TextStyle(
+                          color: Colors.blueGrey[100],
+                          fontSize: 14,
+                        ),
+                      ))
+                  : this.s1 == 'About'
+                      ? InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/about-us');
+                          },
+                          child: Text(
+                            s1,
+                            style: TextStyle(
+                              color: Colors.blueGrey[100],
+                              fontSize: 14,
+                            ),
+                          ))
+                      : InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '#');
+                          },
+                          child: Text(
+                            s1,
+                            style: TextStyle(
+                              color: Colors.blueGrey[100],
+                              fontSize: 14,
+                            ),
+                          ))
             ],
           ),
           SizedBox(height: 5),
