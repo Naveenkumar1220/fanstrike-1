@@ -1,6 +1,7 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:explore/widgets/newFiles/footer/footer.dart';
 import 'package:explore/widgets/newFiles/registratrion.dart';
+import 'package:explore/widgets/newFiles/signInForm.dart';
 import 'package:explore/widgets/web_scrollbar.dart';
 import 'package:explore/widgets/bottom_bar.dart';
 import 'package:explore/widgets/explore_drawer.dart';
@@ -156,19 +157,47 @@ class _SignUpPage extends State<SignUp> {
               screenSize.width > 800
                   ? Container(
                       child: Column(children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Expanded(
-                                flex: 5,
-                                child: RegistrationForm(),
+                        Container(
+                            // height: 600,
+                            // margin: const EdgeInsets.only(left: 50, right: 50),
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                            ),
+                            child: Column(children: [
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 10),
+                                child: Text(
+                                  'Registration & Login ',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(255, 255, 255, 1),
+                                      fontFamily: 'Poppins',
+                                      fontSize: 40,
+                                      letterSpacing:
+                                          0 /*percentages not used in flutter. defaulting to zero*/,
+                                      fontWeight: FontWeight.normal,
+                                      height: 1.75),
+                                ),
                               ),
-                              Expanded(
-                                flex: 5,
-                                child: Text("gygy"),
-                              ),
-                            ]),
+                              Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 100, right: 100),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Expanded(
+                                          flex: 5,
+                                          child: RegistrationForm(),
+                                        ),
+                                        Expanded(
+                                          flex: 5,
+                                          child: SignInForm(),
+                                        )
+                                      ]))
+                            ])),
                         Text(
                           'Screenshots',
                           textAlign: TextAlign.center,
@@ -203,7 +232,61 @@ class _SignUpPage extends State<SignUp> {
                         Footer(screenSize: screenSize),
                       ]),
                     )
-                  : SizedBox(height: screenSize.height / 10),
+                  : Container(
+                      child: Column(children: [
+                        Container(
+                            // height: 500,
+                            // margin: const EdgeInsets.only(left: 50, right: 50),
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                            ),
+                            child: Padding(
+                                padding: EdgeInsets.only(left: 20, right: 20),
+                                child: Column(children: <Widget>[
+                                  Text(
+                                    'Registration & Login',
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(255, 255, 255, 1),
+                                        fontFamily: 'Poppins',
+                                        fontSize: 40,
+                                        letterSpacing:
+                                            0 /*percentages not used in flutter. defaulting to zero*/,
+                                        fontWeight: FontWeight.normal,
+                                        height: 1.75),
+                                  ),
+                                  RegistrationForm(),
+                                  SignInForm(),
+                                ]))),
+                        Text(
+                          'Screenshots',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 40,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1.75),
+                        ),
+                        Column(children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/login 1.png'),
+                                Image.asset('assets/images/login 2.png'),
+                                Image.asset('assets/images/login 3.png'),
+                              ],
+                            ),
+                          )
+                        ]),
+                        SizedBox(height: screenSize.height / 10),
+                        BottomBar(),
+                        Footer(screenSize: screenSize),
+                      ]),
+                    ),
             ],
           ),
         ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 // class SectionFour extends StatelessWidget {
-class RegistrationForm extends StatefulWidget {
+class SignInForm extends StatefulWidget {
   // static const String route = '/';
 
   @override
-  _RegistrationFormPage createState() => _RegistrationFormPage();
+  _SignInFormPage createState() => _SignInFormPage();
 }
 
-class _RegistrationFormPage extends State<RegistrationForm> {
+class _SignInFormPage extends State<SignInForm> {
   // ScrollController _scrollController;
   double _scrollPosition = 0;
   double _opacity = 0;
@@ -32,7 +32,7 @@ class _RegistrationFormPage extends State<RegistrationForm> {
       style: style,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        hintText: "Email",
+        hintText: "Mobile number",
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.blueGrey),
         ),
@@ -44,28 +44,6 @@ class _RegistrationFormPage extends State<RegistrationForm> {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Password",
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.blueGrey),
-        ),
-      ),
-    );
-    final phoneNumber = TextField(
-      obscureText: true,
-      style: style,
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        hintText: "Phone number",
-        enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.blueGrey),
-        ),
-      ),
-    );
-    final referenceCode = TextField(
-      obscureText: true,
-      style: style,
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        hintText: "Reference code",
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.blueGrey),
         ),
@@ -92,33 +70,17 @@ class _RegistrationFormPage extends State<RegistrationForm> {
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                          width: 447,
-                          height: 62,
-                          margin: const EdgeInsets.only(bottom: 10),
+                          width: 132,
+                          height: 68,
                           child: Stack(children: <Widget>[
                             Positioned(
                                 top: 0,
                                 left: 0,
-                                child: Container(
-                                    width: 447,
-                                    height: 62,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                        bottomLeft: Radius.circular(15),
-                                        bottomRight: Radius.circular(15),
-                                      ),
-                                      color: Color.fromRGBO(253, 89, 59, 1),
-                                    ))),
-                            Positioned(
-                                top: 16,
-                                left: 31,
                                 child: Text(
-                                  'Get upto ₹ 100 Bonus Cash on sign-up',
+                                  'Sign-Up with',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                      color: Color.fromRGBO(255, 255, 255, 1),
+                                      color: Color.fromRGBO(25, 42, 86, 1),
                                       fontFamily: 'Poppins',
                                       fontSize: 20,
                                       letterSpacing:
@@ -128,8 +90,6 @@ class _RegistrationFormPage extends State<RegistrationForm> {
                                 )),
                           ])),
                       emailField,
-                      phoneNumber,
-                      referenceCode,
                       passwordField,
                       Container(
                           width: 260,
@@ -195,7 +155,7 @@ class _RegistrationFormPage extends State<RegistrationForm> {
                                                     top: 15,
                                                     left: 88,
                                                     child: Text(
-                                                      'Register',
+                                                      'Login',
                                                       textAlign:
                                                           TextAlign.center,
                                                       style: TextStyle(
@@ -207,23 +167,11 @@ class _RegistrationFormPage extends State<RegistrationForm> {
                                                               0 /*percentages not used in flutter. defaulting to zero*/,
                                                           fontWeight:
                                                               FontWeight.normal,
-                                                          height: 1),
+                                                          height: 1.2),
                                                     )),
                                               ]))),
                                     ]))),
                           ])),
-                      Text(
-                        'Already have an account? Login',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Color.fromRGBO(86, 69, 69, 1),
-                            fontFamily: 'Poppins',
-                            fontSize: 20,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1.2),
-                      ),
                     ])))
         : Container();
   }

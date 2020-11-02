@@ -202,7 +202,20 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
                               Footer(screenSize: screenSize)
                             ],
                           )))
-                  : SizedBox(height: screenSize.height / 10),
+                  : Column(
+                      children: [
+                        titleBox(title: "general", autoscreensize: screenSize),
+                        SizedBox(height: screenSize.height / 10),
+                        titleBox(
+                            title: "Registration", autoscreensize: screenSize),
+                        SizedBox(height: screenSize.height / 10),
+                        titleBox(
+                            title: "Registration", autoscreensize: screenSize),
+                        SizedBox(height: screenSize.height / 10),
+                        BottomBar(),
+                        Footer(screenSize: screenSize)
+                      ],
+                    ),
             ],
           ),
         ),
