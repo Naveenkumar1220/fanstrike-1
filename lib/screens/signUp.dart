@@ -165,7 +165,7 @@ class _SignUpPage extends State<SignUp> {
                             ),
                             child: Column(children: [
                               Padding(
-                                padding: EdgeInsets.only(bottom: 10),
+                                padding: EdgeInsets.only(bottom: 10,top: 150),
                                 child: Text(
                                   'Registration & Login ',
                                   textAlign: TextAlign.left,
@@ -232,61 +232,70 @@ class _SignUpPage extends State<SignUp> {
                         Footer(screenSize: screenSize),
                       ]),
                     )
-                  : Container(
-                      child: Column(children: [
-                        Container(
-                            // height: 500,
-                            // margin: const EdgeInsets.only(left: 50, right: 50),
-                            decoration: BoxDecoration(
-                              color: Color.fromRGBO(25, 42, 86, 1),
-                            ),
-                            child: Padding(
-                                padding: EdgeInsets.only(left: 20, right: 20),
-                                child: Column(children: <Widget>[
-                                  Text(
-                                    'Registration & Login',
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        color: Color.fromRGBO(255, 255, 255, 1),
-                                        fontFamily: 'Poppins',
-                                        fontSize: 40,
-                                        letterSpacing:
-                                            0 /*percentages not used in flutter. defaulting to zero*/,
-                                        fontWeight: FontWeight.normal,
-                                        height: 1.75),
-                                  ),
-                                  RegistrationForm(),
-                                  SignInForm(),
-                                ]))),
-                        Text(
-                          'Screenshots',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Color.fromRGBO(25, 42, 86, 1),
-                              fontFamily: 'Poppins',
-                              fontSize: 40,
-                              letterSpacing:
-                                  0 /*percentages not used in flutter. defaulting to zero*/,
-                              fontWeight: FontWeight.normal,
-                              height: 1.75),
-                        ),
-                        Column(children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 20, right: 20),
-                            child: Column(
-                              children: [
-                                Image.asset('assets/images/login 1.png'),
-                                Image.asset('assets/images/login 2.png'),
-                                Image.asset('assets/images/login 3.png'),
-                              ],
-                            ),
-                          )
-                        ]),
-                        SizedBox(height: screenSize.height / 10),
-                        BottomBar(),
-                        Footer(screenSize: screenSize),
+                  : Column(children: [
+                      Container(
+                          // height: 500,
+                          // margin: const EdgeInsets.only(left: 50, right: 50),
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(25, 42, 86, 1),
+                          ),
+                          child: Padding(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: Column(children: <Widget>[
+                                Padding(
+                              padding: EdgeInsets.only(top: 20, bottom: 20),
+                                child:Text(
+                                  'Registration & Login',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(255, 255, 255, 1),
+                                      fontFamily: 'Poppins',
+                                      fontSize: 40,
+                                      letterSpacing:
+                                          0 /*percentages not used in flutter. defaulting to zero*/,
+                                      fontWeight: FontWeight.normal,
+                                      height: 1.3),
+                                )),
+                                RegistrationForm(),
+                                SignInForm(),
+                              ]))),
+                      Text(
+                        'Screenshots',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color.fromRGBO(25, 42, 86, 1),
+                            fontFamily: 'Poppins',
+                            fontSize: 40,
+                            letterSpacing:
+                                0 /*percentages not used in flutter. defaulting to zero*/,
+                            fontWeight: FontWeight.normal,
+                            height: 1.75),
+                      ),
+                      Column(children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 20, right: 20),
+                          child: Column(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.only(bottom: 40),
+                                  child:
+                                      Image.asset('assets/images/login 1.png')),
+                              Padding(
+                                  padding: EdgeInsets.only(bottom: 40),
+                                  child:
+                                      Image.asset('assets/images/login 2.png')),
+                              Padding(
+                                  padding: EdgeInsets.only(bottom: 40),
+                                  child:
+                                      Image.asset('assets/images/login 3.png')),
+                            ],
+                          ),
+                        )
                       ]),
-                    ),
+                      SizedBox(height: screenSize.height / 10),
+                      BottomBar(),
+                      Footer(screenSize: screenSize),
+                    ]),
             ],
           ),
         ),

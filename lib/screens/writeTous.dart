@@ -144,7 +144,7 @@ class _WritetoUsPage extends State<WriteToUs> {
                   ),
                   Positioned(
                     left: 10,
-                    top: screenSize.width > 800 ? 50 : 0,
+                    top: screenSize.width > 800 ? 80 : 20,
                     right: 10,
                     // bottom: 70,
                     child: RefAndEarnSectionOne(screenSize, "write to us"),

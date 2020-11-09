@@ -148,7 +148,7 @@ class _SignupAndDownloadPage extends State<SignupAndDownload> {
                             letterSpacing:
                                 0 /*percentages not used in flutter. defaulting to zero*/,
                             fontWeight: FontWeight.normal,
-                            height: 1),
+                            height: 1.3),
                       )),
                 ],
               ),

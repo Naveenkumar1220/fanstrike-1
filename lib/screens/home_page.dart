@@ -87,9 +87,10 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
+                    height: 30,
                       decoration:
                           BoxDecoration(color: Color.fromRGBO(25, 42, 86, 1)),
-                      padding: EdgeInsets.only(right: 25),
+                      padding: EdgeInsets.only(right: 15),
                       alignment: Alignment.centerRight,
                       child: DropdownButton<String>(
                         underline: SizedBox(),

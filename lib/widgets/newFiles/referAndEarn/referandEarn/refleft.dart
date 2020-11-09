@@ -20,7 +20,7 @@ class RefLeft extends StatelessWidget {
             children: <Widget>[
                 Padding(
                     padding: EdgeInsets.only(
-                        left: screenSize.width > 800 ? 200 : 50),
+                        left: screenSize.width > 800 ? 100 : 50),
                     child: Text(
                       'Refer & Earn',
                       textAlign: TextAlign.left,
@@ -117,6 +117,23 @@ class RefLeft extends StatelessWidget {
                             top: screenSize.width > 800 ? 100 : 30),
                         child: Text(
                           'We delivered the best to you. We also know that we can do better, we want to offer something that writes Appreciate instead of Feedback. That is not going to happen unless you express what hurts you, what troubles you, what puzzles you and what amazes you. ',
+                          textAlign: TextAlign.left,
+                          textScaleFactor: screenSize.width > 800 ? 1 : 0.4,
+                          style: TextStyle(
+                              color: Color.fromRGBO(25, 42, 86, 1),
+                              fontFamily: 'Poppins',
+                              fontSize: 20,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              // fontWeight: FontWeight.normal,
+                              height: 1.5),
+                        )),
+                        Padding(
+                        padding: EdgeInsets.only(
+                            left: screenSize.width > 800 ? 200 : 50,
+                            top: screenSize.width > 800 ? 50 : 0),
+                        child: Text(
+                          'Write to feedback@fanstrike.in and help us in delivering the dream.',
                           textAlign: TextAlign.left,
                           textScaleFactor: screenSize.width > 800 ? 1 : 0.4,
                           style: TextStyle(

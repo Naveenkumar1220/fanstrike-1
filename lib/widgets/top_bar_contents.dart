@@ -37,7 +37,7 @@ class _TopBarContentsState extends State<TopBarContents> {
       child: Container(
         alignment: Alignment.center,
         // constraints: BoxConstraints(maxWidth: 1300),
-        color: Color.fromRGBO(25, 42, 86, 0.5),
+        color: Color.fromRGBO(25, 42, 86, 1),
         child: Padding(
           padding: EdgeInsets.only(top: 5, left: 80, right: 0, bottom: 10),
           child: Row(
@@ -46,7 +46,7 @@ class _TopBarContentsState extends State<TopBarContents> {
             children: [
               // SizedBox(width: screenSize.width / 8),
               SizedBox(
-                height: 50,
+                height: 40,
                 width: 1300 / 7,
                 child: InkWell(
                   onTap: () {
@@ -71,8 +71,10 @@ class _TopBarContentsState extends State<TopBarContents> {
               //   ),
               // ),
               Expanded(
+                child:Padding(
+                              padding: EdgeInsets.only( right: 200),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(width: 600 / 8),
                     InkWell(
@@ -155,8 +157,8 @@ class _TopBarContentsState extends State<TopBarContents> {
                       onHover: (value) {
                         setState(() {
                           value
-                              ? _isHovering[1] = true
-                              : _isHovering[1] = false;
+                              ? _isHovering[2] = true
+                              : _isHovering[2] = false;
                         });
                       },
                       onTap: () {
@@ -168,7 +170,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                           Text(
                             'SIGN UP',
                             style: TextStyle(
-                              color: _isHovering[1]
+                              color: _isHovering[2]
                                   ? Colors.blue[200]
                                   : Colors.white,
                             ),
@@ -178,7 +180,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                             maintainAnimation: true,
                             maintainState: true,
                             maintainSize: true,
-                            visible: _isHovering[1],
+                            visible: _isHovering[2],
                             child: Container(
                               height: 2,
                               width: 20,
@@ -189,7 +191,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       ),
                     ),
                   ],
-                ),
+                )),
               ),
               // IconButton(
               //   icon: Icon(Icons.brightness_6),

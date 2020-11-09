@@ -17,7 +17,9 @@ class _ExpansiontileState extends State<Expansiontile> {
   Widget build(BuildContext context) {
     // return Padding(
     //   padding: const EdgeInsets.symmetric(horizontal: 30.0),
-    return Column(
+    return Padding(
+                      padding: EdgeInsets.all(20),
+                        child:Column(
       children: <Widget>[
         SizedBox(height: 20.0),
         ExpansionTile(
@@ -66,6 +68,6 @@ class _ExpansiontileState extends State<Expansiontile> {
         ),
       ],
       // ),
-    );
+    ));
   }
 }

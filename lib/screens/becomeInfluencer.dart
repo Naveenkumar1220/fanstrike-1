@@ -205,15 +205,15 @@ class _BinfluencerPage extends State<BecomeInfluencer> {
                   children: <Widget>[
                     Expanded(
                       flex: 5,
-                      child: cards(autoScreenSize: screenSize),
+                      child: cards(autoScreenSize: 263),
                     ),
                     Expanded(
                       flex: 5,
-                      child: cards(autoScreenSize: screenSize),
+                      child: cards(autoScreenSize: 263),
                     ),
                     Expanded(
                       flex: 5,
-                      child: cards(autoScreenSize: screenSize),
+                      child: cards(autoScreenSize: 263),
                     ),
                   ]):
                   // SizedBox(height: screenSize.height / 10),
@@ -246,29 +246,29 @@ class _BinfluencerPage extends State<BecomeInfluencer> {
 
   Widget cards({String title, autoScreenSize, String text}) {
     return Container(
-        width: 800,
-        // height: 482,
-        color: Color.fromRGBO(196, 196, 196, 0.1),
+        width: 263,
+        // height: 268,
+        // color: Color.fromRGBO(196, 196, 196, 0.1),
         margin: const EdgeInsets.only(left: 20.0, right: 20.0),
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                  padding: EdgeInsets.only(left: 13),
+                  padding: EdgeInsets.all(40),
                   child: Column(children: [
                     Image.asset('assets/images/imagePH.png',
-                        width: 308, height: 290),
+                        width: 141, height: 141),
                     Text(
                       "Communicate with their audience",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Color.fromRGBO(86, 69, 69, 1),
-                          fontFamily: 'Poppins',
+                          fontFamily: 'PoppinsLight',
                           fontSize: 20,
                           letterSpacing:
                               0 /*percentages not used in flutter. defaulting to zero*/,
-                          fontWeight: FontWeight.normal,
+                          // fontWeight: FontWeight.normal,
                           height: 1.5),
                     )
                   ])),

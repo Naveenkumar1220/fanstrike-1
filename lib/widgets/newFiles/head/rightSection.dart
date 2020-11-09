@@ -13,7 +13,7 @@ class RightSection extends StatelessWidget {
     return Container(
       // alignment: Alignment.center,
       child: AspectRatio(aspectRatio: screenSize.width <800? 2/2 : 4/3,child: Image.asset(
-        'assets/images/Group 62.png'
+        'assets/images/home.png'
       ),
     ));
   }

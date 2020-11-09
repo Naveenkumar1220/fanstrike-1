@@ -116,7 +116,7 @@ class _HowToPlayPage extends State<HowToPlay> {
           child: Column(
             children: [
               Stack(
-                // alignment: Alignment.center,
+                alignment: screenSize.width >800? Alignment.topLeft: Alignment.center,
                 children: <Widget>[
                   ConstrainedBox(
                     constraints: BoxConstraints(
@@ -137,10 +137,10 @@ class _HowToPlayPage extends State<HowToPlay> {
                   ),
                   Padding(
                       padding: EdgeInsets.only(
-                          top: screenSize.width > 800 ? 240 : 100, left: 75),
+                          top: screenSize.width > 800 ? 240 : 0, left: screenSize.width > 800 ? 200:0),
                       child: Text(
                         'How to Play',
-                        textAlign: TextAlign.left,
+                        textAlign: screenSize.width>800? TextAlign.left:TextAlign.center,
                         style: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 1),
                             fontFamily: 'Poppins',

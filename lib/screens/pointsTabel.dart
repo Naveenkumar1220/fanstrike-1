@@ -116,7 +116,7 @@ class _PointsTabelPage extends State<PointsTabel> {
           child: Column(
             children: [
               Stack(
-                // alignment: Alignment.center,
+                alignment: screenSize.width >800? Alignment.topLeft: Alignment.center,
                 children: <Widget>[
                   ConstrainedBox(
                     constraints: BoxConstraints(
@@ -137,9 +137,9 @@ class _PointsTabelPage extends State<PointsTabel> {
                   ),
                   Padding(
                       padding: EdgeInsets.only(
-                          top: screenSize.width > 800 ? 240 : 100, left: 75),
+                          top: screenSize.width > 800 ? 240 : 0, left:screenSize.width > 800 ? 75:0),
                       child: Text(
-                        'Points table',
+                        'Points Table',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 1),
@@ -152,7 +152,9 @@ class _PointsTabelPage extends State<PointsTabel> {
                       )),
                 ],
               ),Container(
-                      child: Column(children: [
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
                         Padding(
                             padding: EdgeInsets.only(left: 20, right: 20),
                         child:Text(
@@ -160,11 +162,11 @@ class _PointsTabelPage extends State<PointsTabel> {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               color: Color.fromRGBO(25, 42, 86, 1),
-                              fontFamily: 'Poppins',
+                              fontFamily: 'PoppinsBold',
                               fontSize: 30,
                               letterSpacing:
                                   0 /*percentages not used in flutter. defaulting to zero*/,
-                              fontWeight: FontWeight.normal,
+                              // fontWeight: FontWeight.normal,
                               height: 2.3333333333333335),
                         )),
                         Padding(

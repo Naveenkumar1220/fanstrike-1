@@ -154,8 +154,7 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
                 ],
               ),
               screenSize.width > 800
-                  ? Expanded(
-                      child: Container(
+                  ? Container(
                           // color: Colors.red,
                           constraints: BoxConstraints(maxWidth: 1300),
                           child: Column(
@@ -168,7 +167,7 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
                                     Expanded(
                                       flex: 5,
                                       child: titleBox(
-                                          title: "general",
+                                          title: "General",
                                           autoscreensize: screenSize),
                                     ),
                                     Expanded(
@@ -187,7 +186,7 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
                                     Expanded(
                                       flex: 5,
                                       child: titleBox(
-                                          title: "general",
+                                          title: "General",
                                           autoscreensize: screenSize),
                                     ),
                                     Expanded(
@@ -201,10 +200,10 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
                               BottomBar(),
                               Footer(screenSize: screenSize)
                             ],
-                          )))
+                          ))
                   : Column(
                       children: [
-                        titleBox(title: "general", autoscreensize: screenSize),
+                        titleBox(title: "General", autoscreensize: screenSize),
                         SizedBox(height: screenSize.height / 10),
                         titleBox(
                             title: "Registration", autoscreensize: screenSize),
@@ -234,7 +233,7 @@ class _QuesnFreequent extends State<QuestionsFreequent> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: EdgeInsets.only(left: 30,top:15),
                   child: Text(
                     title,
                     textAlign: TextAlign.left,

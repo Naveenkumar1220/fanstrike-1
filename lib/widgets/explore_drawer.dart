@@ -134,9 +134,11 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
                   : Container(),
               userEmail != null ? SizedBox(height: 20) : Container(),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/about-us');
+                },
                 child: Text(
-                  'Discover',
+                  'ABOUT US',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -148,9 +150,27 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/how-to-play');
+                },
                 child: Text(
-                  'Contact Us',
+                  'HOW TO PLAY',
+                  style: TextStyle(color: Colors.white, fontSize: 22),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                child: Divider(
+                  color: Colors.blueGrey[400],
+                  thickness: 2,
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/sign-up');
+                },
+                child: Text(
+                  'SIGN UP',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -158,7 +178,7 @@ class _ExploreDrawerState extends State<ExploreDrawer> {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Copyright © 2020 | EXPLORE',
+                    'Copyright © 2020 | FANSTRIKE',
                     style: TextStyle(
                       color: Colors.blueGrey[300],
                       fontSize: 14,

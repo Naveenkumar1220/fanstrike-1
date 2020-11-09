@@ -69,8 +69,8 @@ class RefSectionTwo extends StatelessWidget {
        Padding(
         padding: EdgeInsets.only(top: 60),child:Container(
           alignment: Alignment.center,
-          width: screenSize.width > 800 ? 260 : 90,
-          height: screenSize.width > 800 ? 60 : 30,
+          width:  260,
+          height:  60 ,
           margin: const EdgeInsets.only(left: 20.0),
           child: Container(
             alignment: Alignment.center,
@@ -88,7 +88,7 @@ class RefSectionTwo extends StatelessWidget {
             child: Text(
               'Download App',
               textAlign: TextAlign.center,
-              textScaleFactor: screenSize.width > 800 ? 1 : 0.5,
+              // textScaleFactor: screenSize.width > 800 ? 1 : 0.5,
               style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'PoppinsBold',

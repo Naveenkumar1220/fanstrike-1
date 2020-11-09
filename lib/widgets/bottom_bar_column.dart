@@ -68,9 +68,22 @@ class BottomBarColumn extends StatelessWidget {
                   color: Colors.blueGrey[100],
                   fontSize: 14,
                 ),
-              )):InkWell(
+              )):
+              this.s1=='How To Play'?
+              InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '#');
+                  Navigator.pushNamed(context, '/how-to-play');
+                },
+              child:Text(
+                s1,
+                style: TextStyle(
+                  color: Colors.blueGrey[100],
+                  fontSize: 14,
+                ),
+              )):
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/download');
                 },
               child:Text(
                 s1,
@@ -95,13 +108,50 @@ class BottomBarColumn extends StatelessWidget {
                         : Brightness.dark);
               },
             ),
-            Text(
+            this.s2=='Write to Us'? InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/write-to-us');
+                },
+              child:Text(
               s2,
               style: TextStyle(
                 color: Colors.blueGrey[100],
                 fontSize: 14,
               ),
-            )
+            )):
+            this.s2=='Points Table'? InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/points-table');
+                },
+              child:Text(
+              s2,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
+            )):
+            this.s2=='Become an Influencer'? InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/become-influencer');
+                },
+              child:Text(
+              s2,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
+            )):
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '#');
+                },
+              child:Text(
+              s2,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
+            ))
           ]),
           SizedBox(height: 5),
           Row(children: [
@@ -117,13 +167,50 @@ class BottomBarColumn extends StatelessWidget {
                         : Brightness.dark);
               },
             ),
-            Text(
+            this.s3=='Sign up for download app'? InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/signup-download');
+                },
+              child:Text(
               s3,
               style: TextStyle(
                 color: Colors.blueGrey[100],
                 fontSize: 14,
               ),
-            )
+            )):
+this.s3=='Refer and Earn'? InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/refer-earn');
+                },
+              child:Text(
+              s3,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
+            )):
+            this.s3=='Offers'? InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/#');
+                },
+              child:Text(
+              s3,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
+            )):
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/#');
+                },
+              child:Text(
+              s3,
+              style: TextStyle(
+                color: Colors.blueGrey[100],
+                fontSize: 14,
+              ),
+            ))
           ]),
         ],
       ),
